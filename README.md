@@ -37,6 +37,13 @@ Dockerized FastAPI wrapper for [Kokoro-82M](https://huggingface.co/hexgrad/Kokor
 Pre built images are available to run, with arm/multi-arch support, and baked in models
 Refer to the core/config.py file for a full list of variables which can be managed via the environment
 
+Note: Fix for Windows error Ports are not available
+```
+net stop winnat
+docker start container_name
+net start winnat
+```
+
 ```bash
 # the `latest` tag can be used, but should not be considered stable as it may include `nightly` branch builds
 # it may have some bonus features however, and feedback/testing is welcome
